@@ -1,14 +1,14 @@
 import axios from "axios";
-import { BASE_URL } from "./apiPaths";
 
 const axiosInstance = axios.create({
-    baseURL: BASE_URL,
+    baseURL: import.meta.env.VITE_APP_BASE_URL,
     timeout: 50000,
     headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
     },
 });
+console.log("URL", import.meta.env.VITE_APP_BASE_URL)
 
 // Request Interceptor
 axiosInstance.interceptors.request.use(

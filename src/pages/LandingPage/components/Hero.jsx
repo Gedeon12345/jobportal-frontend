@@ -52,16 +52,10 @@ const Hero = () => {
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                             className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition duration-300 shadow-lg hover:shadow-xl flex items-center space-x-4 cursor-pointer"
-                            onClick={() => {
-                                navigate(
-                                    isAuthenticated && user?.role === "jobseeker"
-                                    ? "jobseeker-dashboard"
-                                    : "login"
-                                );
-                            }}
+                            onClick={() => navigate("/find-jobs")}
                         >
                             <Search className="w-5 h-5" />
-                            <span>Post Competence</span>
+                            <span>Find Jobs</span>
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </motion.button>
 

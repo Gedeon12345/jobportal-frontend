@@ -101,7 +101,7 @@ const Login = () => {
                     window.location.href = 
                         role === "employer"
                             ? "/employer-dashboard"
-                            : "/jobseeker-dashboard";
+                            : "/find-jobs";
                 }, 2000);
             }
 
@@ -109,7 +109,7 @@ const Login = () => {
             setTimeout(() => {
                 const redirectPath = user.role === "employer"
                     ? "/employer-dashboard"
-                    : "/jobseeker-dashboard";
+                    : "/find-jobs";
                 window.location.href = redirectPath;
             }, 1500);
 

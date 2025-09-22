@@ -5,13 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "react-scripts build",
+    "start": "react-scripts start",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.12",
     "axios": "^1.11.0",
+    "dotenv": "^16.5.0",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.541.0",
     "moment": "^2.30.1",
