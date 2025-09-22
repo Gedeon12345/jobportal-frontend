@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { validateAvatar, validateEmail, validatePassword } from "../../utils/helper";
 import uploadImage from "../../utils/uploadimage";
-import axiosInstance from "../../utils/axiosinstance";
+import axiosInstance from "../../utils/axiosInstance";
 import { API_PATHS } from "../../utils/apiPaths";
 import { useAuth } from "../../context/AuthContext";
 
