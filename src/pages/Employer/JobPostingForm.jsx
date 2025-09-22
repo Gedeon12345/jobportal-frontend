@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { API_PATHS } from "../../utils/apiPaths";
 import { useLocation, useNavigate } from "react-router-dom";
-import axiosInstance from "../../utils/axiosinstance";
+import axiosInstance from "../../utils/axiosInstance";
 import { CATEGORIES, JOB_TYPES } from "../../utils/data";
 import toast from "react-hot-toast";
 import InputField from "../../components/input/InputField";

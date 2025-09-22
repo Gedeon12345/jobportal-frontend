@@ -8,7 +8,7 @@ import {
     Eye,
     ArrowLeft,
 } from "lucide-react";
-import axiosInstance from "../../utils/axiosinstance";
+import axiosInstance from "../../utils/axiosInstance";
 import { API_PATHS } from "../../utils/apiPaths";
 import { useLocation, useNavigate } from "react-router-dom";
 import moment from "moment";

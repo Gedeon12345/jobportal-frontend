@@ -1,7 +1,7 @@
 import { ArrowLeft, Bookmark, Grid, List } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import axiosInstance from "../../utils/axiosinstance";
+import axiosInstance from "../../utils/axiosInstance";
 import { API_PATHS } from "../../utils/apiPaths";
 import { useEffect, useState } from "react";
 import NavBar from "../../components/layout/NavBar";

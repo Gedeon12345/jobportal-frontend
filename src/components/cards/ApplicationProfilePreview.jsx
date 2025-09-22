@@ -2,7 +2,7 @@ import { Download, X } from "lucide-react";
 import { useState } from "react";
 import { getInitials } from "../../utils/helper";
 import moment from "moment";
-import axiosInstance from "../../utils/axiosinstance";
+import axiosInstance from "../../utils/axiosInstance";
 import { API_PATHS } from "../../utils/apiPaths";
 import toast from "react-hot-toast";
 

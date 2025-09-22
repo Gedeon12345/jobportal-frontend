@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Building2, Mail, Edit3 } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
-import axiosInstance from "../../utils/axiosinstance";
+import axiosInstance from "../../utils/axiosInstance";
 import { API_PATHS } from "../../utils/apiPaths";
 import toast from "react-hot-toast";
 import uploadImage from "../../utils/uploadimage";

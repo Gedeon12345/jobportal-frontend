@@ -9,7 +9,7 @@ import {
     ChevronDown,
     Users, 
 } from "lucide-react";
-import axiosInstance from "../../utils/axiosinstance";
+import axiosInstance from "../../utils/axiosInstance";
 import { API_PATHS } from "../../utils/apiPaths";
 import moment from "moment";
 import { useNavigate } from "react-router-dom";

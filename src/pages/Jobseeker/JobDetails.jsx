@@ -1,7 +1,7 @@
 import { MapPin, Building2, Clock, Users, DollarSign } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
 import { useParams } from "react-router-dom";
-import axiosInstance from "../../utils/axiosinstance";
+import axiosInstance from "../../utils/axiosInstance";
 import { API_PATHS } from "../../utils/apiPaths";
 import { useEffect, useState } from "react";
 import NavBar from "../../components/layout/NavBar";
