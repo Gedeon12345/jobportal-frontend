@@ -8,7 +8,6 @@ const axiosInstance = axios.create({
         Accept: "application/json",
     },
 });
-console.log("URL", import.meta.env.VITE_APP_BASE_URL)
 
 // Request Interceptor
 axiosInstance.interceptors.request.use(
