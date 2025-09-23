@@ -1,4 +1,4 @@
-import { Bookmark, Building, Building2, Calendar, MapPin } from "lucide-react";
+import { Bookmark, BookmarkCheck, Building, Building2, Calendar, MapPin } from "lucide-react";
 import moment from "moment";
 import { useAuth } from "../../context/AuthContext";
 import StatusBadge from "../StatusBadge";
@@ -52,11 +52,16 @@ const JobCard = ({ job, onClick, onToggleSave, onApply, saved, hideApply }) => {
                             onToggleSave();
                         }}
                     >
-                        <Bookmark 
+                        {job.isSaved ? (
+                            <BookmarkCheck className="w-5 h-5 hover:text-blue-600 text-blue-600" />
+                        ) : (
+                            <Bookmark className="w-5 h-5 hover:text-blue-600 text-gray-400" />
+                        )}
+                        {/* <Bookmark 
                             className={`w-5 h-5 hover:text-blue-600 ${
                                 job?.isSaved || saved ? "text-blue-600" : "text-gray-400"
                             }`} 
-                        />
+                        /> */}
                     </button>
                 )}
             </div>
