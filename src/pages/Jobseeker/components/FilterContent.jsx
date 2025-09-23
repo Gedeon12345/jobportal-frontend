@@ -1,6 +1,6 @@
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { CATEGORIES, JOB_TYPES } from "../../../utils/data";
-import SalaryRangeSlider from "../../../components/input/SalaryRangeSlider";
+import SalaryRangeSlider from "../../../components/input/SalaryRangeSlider";  
 
 const FilterSection = ({ title, children, isExpanded, onToggle }) => (
     <div className="border-b border-gray-200 pb-4 mb-4 last:border-b-0">
