@@ -47,7 +47,7 @@ const SavedJobs = () => {
 
             <div className="container mx-auto pt-24">
                 {savedJobList && (
-                    <div className="bg-white mx-auto pt-20">
+                    <div className="bg-white mx-auto pt-20 px-10">
                         <div className="flex items-center justify-between mb-8">
                             <div className="flex items-center gap-4">
                                 <button
