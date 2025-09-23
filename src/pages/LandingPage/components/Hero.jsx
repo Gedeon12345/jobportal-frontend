@@ -14,7 +14,7 @@ const Hero = () => {
         { icon: TrendingUp, label: "Job posted", value: "150k+" }
     ]
     return(
-        <section className="pt-[600px] pb-16 md:pt-40  bg-white max-h-screen flex items-center">
+        <section className="pt-[600px] pb-[500px] md:pb-16 md:pt-20 bg-white max-h-screen flex items-center">
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto text-center">
                     {/* Main Heading */}
