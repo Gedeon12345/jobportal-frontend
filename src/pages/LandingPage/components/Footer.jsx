@@ -2,7 +2,7 @@ import { Briefcase } from "lucide-react";
 
 const Footer = () => {
     return(
-        <footer className="relative bg-gray-50 text-gray-500 overflow-hidden">
+        <footer className="relative bg-gray-100 text-gray-500 overflow-hidden">
             <div className="relative z-10 px-6 py-16">
                 <div className="maw-w-6xl mx-auto">
                     {/* Main Footer Content */}
@@ -28,7 +28,7 @@ const Footer = () => {
                                 © {new Date().getFullYear()} Time to progress
                             </p>
                             <p className={`text-xs text-gray-500`}>
-                                Made with ❤️... Happy coding
+                                Made with ❤️... For you
                             </p>
                         </div>
                     </div>

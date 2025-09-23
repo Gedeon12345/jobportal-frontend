@@ -24,6 +24,7 @@ import JobseekerDashboard from "./pages/Jobseeker/JobSeekerDashboard2";
 import PostCompetence from "./pages/Jobseeker/PostCompetence";
 import AppliedJobs from "./pages/Jobseeker/AppliedJobs"; 
 import ManageCompetencies from "./pages/Jobseeker/ManageCompetencies";
+import AboutUs from "./pages/LandingPage/AboutUs";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
       <Routes>
         {/* Public routes */}
         <Route path="/" element={<LandingPage />} />
+        <Route path="/about-us" element={<AboutUs />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
 

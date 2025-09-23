@@ -1,5 +1,6 @@
 import React from "react";
 import {motion} from "framer-motion";
+import { Link } from "react-router-dom";
 import {Briefcase} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext";
@@ -18,18 +19,18 @@ const Header = () => {
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
-                    <div className="flex items-center space-x-4">
+                    <Link to="/" className="flex items-center space-x-4">
                         <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                             <Briefcase className="w-5 h-5 text-white" />
                         </div>
                         <span className="text-xl font-bold text-gray-900">JobPortal</span>
-                    </div>
+                    </Link>
 
                     {/* Navigation Links - Hidden on mobile */}
                     <nav className="hidden md:flex items-center space-x-5">
                         <a 
                             onClick={() => navigate("/find-jobs")}
-                            className="text-gray-600 hover:text-gray-900 transition-colors font-medium"
+                            className="text-gray-600 hover:text-gray-900 transition-colors font-medium cursor-pointer" 
                         >
                             Find Jobs
                         </a>
@@ -41,9 +42,15 @@ const Header = () => {
                                     : "/login"
                                 );
                             }}
-                            className="text-gray-600 hover:text-gray-900 transition-colors font-medium"
+                            className="text-gray-600 hover:text-gray-900 transition-colors font-medium cursor-pointer"
                         >
                             For Employers
+                        </a>
+                        <a 
+                            onClick={() => navigate("/about-us")}
+                            className="text-gray-600 hover:text-gray-900 transition-colors font-medium cursor-pointer" 
+                        >
+                            About us
                         </a>
                     </nav>
 
