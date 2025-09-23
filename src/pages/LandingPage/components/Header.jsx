@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import {motion} from "framer-motion";
 import { Link } from "react-router-dom";
-import {Briefcase} from "lucide-react";
+import {Briefcase, Menu, X} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext";
 
 const Header = () => {
     const {user, isAuthenticated} = useAuth();
     const navigate = useNavigate();
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return(
         <motion.header
@@ -55,10 +57,10 @@ const Header = () => {
                     </nav>
 
                     {/* Auth Buttons */}
-                    <div className="flex items-center space-x-3">
+                    <div className="hidden md:flex items-center space-x-3">
                         {isAuthenticated ? (
                             <div className="flex items-center space-x-3">
-                                <span className="text-gray-700">Welcome, {user?.fullName}</span>
+                                <span className="text-gray-700">Welcome, <strong>{user?.name}</strong></span>
                                 <a
                                     href={
                                         user?.role === "employer"
@@ -87,7 +89,81 @@ const Header = () => {
                             </>
                         )}
                     </div>
+
+                    {/* Mobile menu button */}
+                    <button
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        className="md:hidden p-2 rounded-md hover:bg-muted"
+                    >
+                        {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                    </button>
                 </div>
+
+                {/* Mobile Navigation */}
+                {isMenuOpen && (
+                <div className="md:hidden pb-4 border-t border-b border-gray-300 mt-2 pt-4">
+                    <div className="flex flex-col space-y-2">
+                        <a 
+                            onClick={() => navigate("/find-jobs")}
+                            className="text-gray-600 hover:text-gray-900 transition-colors font-medium cursor-pointer" 
+                        >
+                            Find Jobs
+                        </a>
+                        <a 
+                            onClick={() => {
+                                navigate(
+                                    isAuthenticated && user?.role === "employer"
+                                    ? "/employer-dashboard"
+                                    : "/login"
+                                );
+                            }}
+                            className="text-gray-600 hover:text-gray-900 transition-colors font-medium cursor-pointer"
+                        >
+                            For Employers
+                        </a>
+                        <a 
+                            onClick={() => navigate("/about-us")}
+                            className="text-gray-600 hover:text-gray-900 transition-colors font-medium cursor-pointer" 
+                        >
+                            About us
+                        </a>
+                    </div>
+                    {/* Auth Buttons */}
+                    <div className="flex flex-col items-start justify-start">
+                        {isAuthenticated ? (
+                            <div className="flex items-center space-x-3">
+                                <span className="text-gray-700">Welcome, <strong>{user?.name}</strong></span>
+                                <a
+                                    href={
+                                        user?.role === "employer"
+                                        ? "/employer-dashboard"
+                                        : "/find-jobs"
+                                    }
+                                    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-sm hover:shadow-md"
+                                >
+                                    Dashboard
+                                </a>
+                            </div>
+                        ) : (
+                            <div className="flex flex-col justify-start items-start">
+                                <a 
+                                href="/login"
+                                className="text-gray-600 hover:text-gray-900 transition-colors font-medium px-4 py-2 rounded-lg hover:bg-gray-50"
+                                >
+                                    Login
+                                </a>
+                                <a 
+                                href="/signup"
+                                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-sm hover:shadow-md"
+                                >
+                                    Sign Up
+                                </a>
+                            </div>
+                        )}
+                    </div>
+                </div>
+                )}
+
             </div>
         </motion.header>
     )
