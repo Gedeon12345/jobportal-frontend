@@ -321,7 +321,7 @@ const JobPostingForm = () => {
                                 <label className="block text-sm font-medium text-gray-700">
                                     Salary Range <span className="text-red-500">*</span>
                                 </label>
-                                <div className="grid grid-cols-3 gap-3">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                     <div className="relative">
                                         <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none z-100">
                                             <span className="h-4 w-5 text-xs text-gray-400">FCFA</span>
